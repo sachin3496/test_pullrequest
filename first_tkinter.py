@@ -10,5 +10,7 @@ label = tk.Label(text="Hello World", fg='#eeeeee', bg='#333333', height=10, widt
 
 label.pack(fill=tk.BOTH, expand=tk.YES)
 
-
+exit_button = tk.Button(root, text='Exit', fg='red', bg='#eeeeee', font=('monospace', 24, 'bold'))
+exit_button.pack(fill=tk.X, expand=tk.YES)
+exit_button.config(command=lambda : root.quit())
 root.mainloop()
