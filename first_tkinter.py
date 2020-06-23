@@ -4,12 +4,14 @@ root = tk.Tk()
 flag = True
 
 def change_color():
-        if flag:
-            label.config(fg ='#333333',bg = '#eeeeee')
-            flag = False
-        else:
-            label.config(fg = '#eeeeee', bg='#333333')
-                flag = True
+    global flag
+    if flag:
+        label.config(fg ='#333333',bg = '#eeeeee')
+        flag = False
+    else:
+        label.config(fg = '#eeeeee', bg='#333333')
+        flag = True
+    label.after(1000, change_color)
 root.title("Hello World Application")
 
 label = tk.Label(text="Hello World", fg='#eeeeee', bg='#333333', height=10, width=30,
